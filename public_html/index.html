@@ -1,0 +1,43 @@
+
+<html>
+    <head>
+        <title>MORRA CINESE</title> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>       
+        <h1>Carta Pietra Forbice</h1> <img id="h1" src="morra_ci.png">
+        <button onclick="morraCinese()">Lucky?</button>
+        <p id="morra_ci"></p>
+        <img id="Car" src="carta-morra-cinese.png">
+        <img id="Sas" src="sasso-morra-cinese.png">
+        <img id="Forb" src="forbici-morra-cinese.png">
+        
+    </body>
+</html>
+
+<script>
+    var v_Carta="id='Car'";
+    var v_Sasso="sasso-morra-cinese.png";
+    var v_Forbice="forbici-morra-cinese.png";
+
+    function morraCinese() {
+        
+        var rnd=Math.random();
+        
+        
+        var ris;
+        if (rnd <= 0.333)
+            ris= v_Carta;
+        else if (rnd >= 0.333 && rnd <=  0.666)
+            ris= v_Sasso;
+        else if (rnd >= 0.666 && rnd <=  0.999)
+            ris= v_Forbice;
+            
+            
+            
+            document.getElementById("morra_ci").innerHTML = ris;
+    }
+    
+
+</script>
